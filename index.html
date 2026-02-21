@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriCat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🐱 NutriCat</h1>
+    <div class="hero" id="hero">Quanto devo alimentar meu gato?</div>
+
+<div class="toggle-row">
+    <!-- Dark Mode Toggle Container -->
+    <div class="toggle-container">
+        <label for="darkToggle">Dark Mode</label>
+        <div class="toggle-switch">
+            <input type="checkbox" id="darkToggle" />
+            <div class="toggle-thumb"></div>
+        </div>
+    </div>
+
+    <!-- Language Toggle Container -->
+    <div class="toggle-container">
+        <label for="langToggle">English</label>
+        <div class="toggle-switch">
+            <input type="checkbox" id="langToggle" />
+            <div class="toggle-thumb"></div>
+        </div>
+    </div>
+</div>
+
+    <label id="weightLabel">Peso do gato (kg)</label>
+    <input type="range" id="weightRange" min="1" max="20" step="0.1" value="4.5">
+    <input type="number" id="weight" step="0.1" placeholder="ex: 4,5">
+
+    <label id="typeLabel">Tipo de gato</label>
+    <select id="type">
+        <option value="1.2" data-en="Neutered adult" data-pt="Adulto castrado">Adulto castrado</option>
+        <option value="1.4" data-en="Intact adult" data-pt="Adulto não castrado">Adulto não castrado</option>
+        <option value="1.0" data-en="Inactive / Obese prone" data-pt="Inativo / propenso à obesidade">Inativo / propenso à obesidade</option>
+        <option value="0.8" data-en="In need of weight loss" data-pt="Com necessidade de perda de peso">Com necessidade de perda de peso</option>
+        <option value="2.5" data-en="Kitten" data-pt="Filhote">Filhote</option>
+    </select>
+
+    <label id="foodLabel">Energia do alimento (kcal por kg)</label>
+    <input type="range" id="foodRange" min="500" max="5000" step="10" value="3700">
+    <input type="number" id="foodEnergy" min="500" max="5000" step="10" placeholder="3700">
+
+    <div class="result" id="result"></div>
+
+    <div class="disclaimer" id="disclaimer">
+        Esta calculadora fornece uma estimativa com base nas diretrizes do <em>2021 AAHA Nutrition and Weight Management Guidelines for Dogs and Cats</em>. Sempre consulte seu veterinário para orientação personalizada.
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
